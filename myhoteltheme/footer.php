@@ -1,11 +1,3 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * @package myhoteltheme
- */
-?>
-
 <footer class="site-footer bg-dark text-white pt-5">
   <div class="container">
     <div class="row">
@@ -20,7 +12,7 @@
       </div>
 
       <!-- Cột 2: Menu Footer -->
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 text-white">
         <h5 class="text-uppercase fw-bold">Menu</h5>
         <?php
         wp_nav_menu(array(
@@ -47,8 +39,26 @@
       <p class="mb-0">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
     </div>
   </div>
-</footer>
 
-<?php wp_footer(); ?>
-</body>
-</html>
+  <!-- Thêm CSS trực tiếp -->
+  <style>
+    .site-footer a {
+      color: white !important;
+      text-decoration: none !important;
+      transition: color 0.3s ease;
+    }
+
+    .site-footer a:hover {
+      color: #90cdf4 !important;
+    }
+
+    .site-footer ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .site-footer ul li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</footer>
